@@ -1,0 +1,26 @@
+:root {
+  --first-color: #092635;
+  --second-color: #1b4242;
+  --third-color: #5c8374;
+  --fourth-color: #9ec8b9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--first-color);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  color: var(--third-color);
+}
