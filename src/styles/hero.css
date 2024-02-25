@@ -1,0 +1,29 @@
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/images/heros/hero-image.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero-tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}

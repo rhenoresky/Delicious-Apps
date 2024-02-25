@@ -10,17 +10,21 @@ class Navbar extends HTMLElement {
         <span class="fa fa-bars"></span>
       </button>
 
-      <div class="nav-container">
+      <nav class="nav-container">
         <ul class="nav-list">
           <li class="nav-item"><a href="/">Home</a></li>
           <li class="nav-item"><a href="#">Favorite</a></li>
           <li class="nav-item">
             <a href="https://www.linkedin.com/in/rheno-resky-nugraha/" target="_blank">
-              About Us
+              About
             </a>
           </li>
+          <li class="nav-item">
+          <button class="btn-close" aria-label="close button" type="button">
+            <span class="fa fa-close"></span>
+          </button></li>
         </ul>
-      </div>
+      </nav>
     `;
   }
 }

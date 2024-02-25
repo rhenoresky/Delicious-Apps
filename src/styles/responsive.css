@@ -1,5 +1,42 @@
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 540px) {
+  nav-bar {
+    padding: 0;
+  }
+
+  ul > li:nth-child(4) {
+    display: none;
+  }
+
   .mobile-menu {
     display: none;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0 1rem;
+    background-color: var(--second-color);
+  }
+
+  .nav-list {
+    background-color: var(--second-color);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+
+  .nav-item {
+    padding: 0.75rem 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
