@@ -65,7 +65,11 @@ restaurant-component > h2 {
 .post-item-title {
   font-weight: 700;
   font-size: 1.25rem;
-  margin-top: 16px;
+  padding: 1rem 0;
+}
+
+.post-item-title > a {
+  padding: 1rem 0;
 }
 
 .post-item-title > a:hover {
@@ -79,7 +83,6 @@ restaurant-component > h2 {
 }
 
 .post-item-description {
-  margin-top: 16px;
   font-size: 12px;
   line-height: 1.5em;
   line-clamp: 5;
