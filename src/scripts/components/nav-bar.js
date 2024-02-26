@@ -31,12 +31,16 @@ class Navbar extends HTMLElement {
     const close = this.querySelector(".btn-close");
     const navContainer = this.querySelector(".nav-container");
 
-    menu.addEventListener("click", function (event) {
+    menu.addEventListener("click", (event) => {
       navContainer.classList.toggle("open");
       event.stopPropagation();
     });
 
-    close.addEventListener("click", function () {
+    close.addEventListener("click", () => {
+      navContainer.classList.remove("open");
+    });
+
+    window.addEventListener("scroll", () => {
       navContainer.classList.remove("open");
     });
   }
