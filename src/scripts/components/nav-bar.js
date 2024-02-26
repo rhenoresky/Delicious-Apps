@@ -26,6 +26,19 @@ class Navbar extends HTMLElement {
         </ul>
       </nav>
     `;
+
+    const menu = this.querySelector(".mobile-menu");
+    const close = this.querySelector(".btn-close");
+    const navContainer = this.querySelector(".nav-container");
+
+    menu.addEventListener("click", function (event) {
+      navContainer.classList.toggle("open");
+      event.stopPropagation();
+    });
+
+    close.addEventListener("click", function () {
+      navContainer.classList.remove("open");
+    });
   }
 }
 
