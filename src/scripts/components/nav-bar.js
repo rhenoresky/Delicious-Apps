@@ -10,16 +10,16 @@ class Navbar extends HTMLElement {
         <span class="fa fa-bars"></span>
       </button>
 
-      <nav class="nav-container">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="#">Favorite</a></li>
-          <li class="nav-item">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/">Home</a></li>
+          <li class="nav__item"><a href="#/favorite">Favorite</a></li>
+          <li class="nav__item">
             <a href="https://www.linkedin.com/in/rheno-resky-nugraha/" target="_blank">
               About
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav__item">
           <button class="btn-close" aria-label="close button" type="button">
             <span class="fa fa-close"></span>
           </button></li>
@@ -27,23 +27,27 @@ class Navbar extends HTMLElement {
       </nav>
     `;
 
-    const menu = this.querySelector(".mobile-menu");
-    const close = this.querySelector(".btn-close");
-    const navContainer = this.querySelector(".nav-container");
+    const menu = this.querySelector('.mobile-menu');
+    const close = this.querySelector('.btn-close');
+    const navContainer = this.querySelector('.nav');
 
-    menu.addEventListener("click", (event) => {
-      navContainer.classList.toggle("open");
+    menu.addEventListener('click', (event) => {
+      navContainer.classList.toggle('open');
       event.stopPropagation();
     });
 
-    close.addEventListener("click", () => {
-      navContainer.classList.remove("open");
+    close.addEventListener('click', () => {
+      navContainer.classList.remove('open');
     });
 
-    window.addEventListener("scroll", () => {
-      navContainer.classList.remove("open");
+    window.addEventListener('scroll', () => {
+      navContainer.classList.remove('open');
+    });
+
+    window.addEventListener('hashchange', () => {
+      navContainer.classList.remove('open');
     });
   }
 }
 
-customElements.define("nav-bar", Navbar);
+customElements.define('nav-bar', Navbar);
