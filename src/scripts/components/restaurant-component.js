@@ -1,4 +1,4 @@
-import "./restaurant-item";
+import './restaurant-item';
 
 class RestaurantComponent extends HTMLElement {
   connectedCallback() {
@@ -10,18 +10,26 @@ class RestaurantComponent extends HTMLElement {
     this.render();
   }
 
+  set heading(heading) {
+    this._heading = heading;
+    this.render();
+  }
+
   render() {
     this.innerHTML = `
-      <h2>Explore Restaurant</h2>
-      <div class="posts"></div>
+      <h2>${this._heading}</h2>
+      <div class="post"></div>
     `;
-    const postsElement = this.querySelector(".posts");
-    this._listRestaurant.forEach((restaurant) => {
-      const restaurantItemElement = document.createElement("restaurant-item");
-      restaurantItemElement.item = restaurant;
-      postsElement.appendChild(restaurantItemElement);
-    });
+
+    const postsElement = this.querySelector('.post');
+    if (this._listRestaurant) {
+      this._listRestaurant.forEach((restaurant) => {
+        const restaurantItemElement = document.createElement('restaurant-item');
+        restaurantItemElement.item = restaurant;
+        postsElement.appendChild(restaurantItemElement);
+      });
+    }
   }
 }
 
-customElements.define("restaurant-component", RestaurantComponent);
+customElements.define('restaurant-component', RestaurantComponent);
