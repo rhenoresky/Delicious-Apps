@@ -10,12 +10,8 @@ class TheRestaurantDbSource {
 
   static async detailRestaurant(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
-    return await response.json();
-  }
-
-  static async searchRestaurant(query) {
-    const response = await fetch(API_ENDPOINT.SEARCH(query));
-    return await response.json();
+    const responseJson = await response.json();
+    return responseJson.restaurant;
   }
 
   static async addReview(data) {
@@ -27,11 +23,6 @@ class TheRestaurantDbSource {
       body: JSON.stringify(data),
     });
 
-    return await response.json();
-  }
-
-  static async getImageRestaurant({size, id}) {
-    const response = await fetch(API_ENDPOINT.GET_IMAGE({size, id}));
     return await response.json();
   }
 }
