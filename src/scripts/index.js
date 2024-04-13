@@ -1,10 +1,22 @@
-import "regenerator-runtime";
-import "./components/nav-bar";
-import "../styles/app.css";
-import "../styles/nav-bar.css";
-import "../styles/responsive.css";
-import "../styles/hero.css";
-import "../styles/restaurant.css";
-import main from "./views/main";
+import 'regenerator-runtime';
+import '../styles/app.css';
+import '../styles/nav-bar.css';
+import '../styles/hero.css';
+import '../styles/restaurant.css';
+import '../styles/detail.css';
+import '../styles/loading.css';
+import '../styles/responsive.css';
+import './components/nav-bar';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-document.addEventListener("DOMContentLoaded", main);
+const app = new App(document.querySelector('#mainContent'));
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', async () => {
+  app.renderPage();
+  await swRegister();
+});
