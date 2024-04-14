@@ -5,24 +5,24 @@
   width: 100%;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/images/heros/hero-image.jpg");
+    url('../public/images/heros/hero-image.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.hero-inner {
+.hero__inner {
   margin: 0 auto;
   max-width: 800px;
   padding: 0 0.5rem;
 }
 
-.hero-title {
+.hero__title {
   color: #fff;
   font-weight: 500;
   font-size: 36px;
 }
 
-.hero-tagline {
+.hero__tagline {
   color: #fff;
   margin-top: 16px;
   font-size: 18px;
