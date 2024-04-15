@@ -39,7 +39,7 @@ nav-bar {
   color: var(--fourth-color);
 }
 
-.nav-container {
+.nav {
   z-index: 10;
   display: none;
   position: absolute;
@@ -49,7 +49,7 @@ nav-bar {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.nav-list {
+.nav__list {
   background-color: var(--second-color);
   height: 13rem;
   display: flex;
@@ -60,20 +60,20 @@ nav-bar {
   gap: 0.5rem;
 }
 
-.nav-item {
+.nav__item {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-item > a {
+.nav__item > a {
   text-decoration: none;
   color: var(--fourth-color);
   padding: 1rem;
 }
 
-.nav-item > a:hover {
+.nav__item > a:hover {
   text-decoration: underline;
 }
 
