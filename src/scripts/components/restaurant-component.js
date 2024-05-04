@@ -17,7 +17,7 @@ class RestaurantComponent extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <h2>${this._heading}</h2>
+      <h2 id="caption">${this._heading}</h2>
       <div class="post"></div>
     `;
 
