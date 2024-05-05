@@ -15,14 +15,18 @@ class RestaurantItem extends HTMLElement {
   render() {
     this.innerHTML = `
     <article id="${this._restaurant.id}" class="post__item">
-      <img
-        class="post__item-thumbnail"
-        src="${API_ENDPOINT.GET_IMAGE({
-          size: 'medium',
+      <picture>
+        <source media="(max-width: 780px)" data-srcset="${API_ENDPOINT.GET_IMAGE({
+          size: 'small',
           id: this._restaurant.pictureId,
-        })}"
-        alt="image ${this._restaurant.name}"
-      />
+        })}" />
+        <img class="lazyload post__item-thumbnail"
+          data-src="${API_ENDPOINT.GET_IMAGE({
+            size: 'medium',
+            id: this._restaurant.pictureId,
+          })}"
+          alt="image ${this._restaurant.name}" />
+      </picture>
       <div class="city-label">
         <span>${this._restaurant.city}</span>
       </div>
