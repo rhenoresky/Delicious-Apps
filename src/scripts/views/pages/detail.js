@@ -1,9 +1,10 @@
 import UrlParser from '../../routes/url-parser';
 import TheRestaurantDbSource from '../../data/restaurant-source';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
 import restaurantDetail from '../templates/detail-restaurant';
 import {loading} from '../templates/loading';
 import {swalError, swalSuccess} from '../../utils/swal';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import FavoriteRestaurantIdb from '../../data/favorit-restaurant-idb';
 
 const Detail = {
   async render() {
@@ -41,9 +42,10 @@ const Detail = {
         swalSuccess('Successfully added reviews');
       });
 
-      await LikeButtonInitiator.init({
+      await LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         restaurant,
+        favoriteRestaurant: FavoriteRestaurantIdb,
       });
     } catch (err) {
       restaurantContainer.innerHTML = '';
