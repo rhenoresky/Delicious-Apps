@@ -11,6 +11,10 @@ const Favorite = {
   async afterRender() {
     const restaurantElement = document.querySelector('restaurant-component');
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    if (restaurants.length < 1) {
+      restaurantElement.heading = 'No Favorite Restaurant';
+      return;
+    }
     restaurantElement.heading = 'Favorite Restaurant';
     restaurantElement.listRestaurant = restaurants;
   },
