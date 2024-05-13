@@ -13,7 +13,7 @@
 
 *:focus {
   border: none;
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 0.25rem;
 }
 
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
@@ -35,53 +35,7 @@ body {
 
 main {
   width: 100%;
-}
-
-aside {
-  z-index: 5;
-  position: fixed;
-  inset-block: 0;
-  inset-inline-end: 0;
-  display: flex;
-  align-items: center;
-  top: 4rem;
-  height: 80%;
-}
-
-aside .social-media {
-  display: flex;
-}
-
-aside .social-media ul {
-  padding: 0.5rem;
-  margin: auto;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  background-color: var(--third-color);
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-aside .social-media li {
-  list-style-type: none;
-}
-
-aside .social-media li a {
-  text-decoration: none;
-  color: #609966;
-  width: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-aside .social-media li a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  min-height: 100vh;
 }
 
 footer {
